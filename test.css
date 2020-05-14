@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
 }
-
 a {
   text-decoration: none;
 }
-
+body{
+  background:url(./wall.jpg) no-repeat center center
+}
 kbd {
   border: 1px solid red;
   width: 4em;
@@ -17,10 +18,65 @@ kbd {
 }
 
 main {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-kbd > button{
+#main{
+  display: inline-block;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+#main>div:nth-child(2) {
+  margin-left: auto;
+}
+
+#main>div:nth-child(3) {
+  margin-left: -70px;
+}
+
+kbd>button {
   position: absolute;
   right: 0;
   bottom: 0;
+  display: none;
+}
+
+kbd:hover>button {
+  display: inline-block;
+}
+
+.key {
+  width: 100px;
+  height: 80px;
+  background: linear-gradient(to bottom, #292929 0%, #111111 100%);
+  border: 1px solid #373737;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #1a1b1c, 0 3px 0 2px #1f2020;
+  font-size: 20px;
+  position: relative;
+}
+
+.row {
+  margin: 20px;
+}
+
+.row .key {
+  margin: 0 10px;
+}
+.key img{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+.key span{
+  position: absolute;
+  left: 15px;
+  top: 10px;
 }
